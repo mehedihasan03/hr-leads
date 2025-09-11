@@ -28,6 +28,7 @@ It provides employee management features such as **XML import**, **search**, and
 ---
 
 ## 📂 Project Structure
+```
 src
  └── main
      ├── java/com/hr/hrapplication
@@ -60,3 +61,4 @@ src
          ├── application.properties
          └── data.xml
  └── test/...
+```
