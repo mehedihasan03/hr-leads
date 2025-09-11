@@ -62,3 +62,30 @@ src
          └── data.xml
  └── test/...
 ```
+
+# 🧩 Endpoints (Representative)
+
+Exact paths come from EmployeeController & XmlImportController. If you keep the conventional naming, they will look like:
+
+Employee :
+```
+
+GET /api/employees — list employees (optional pagination/filter)
+
+GET /api/employees/{id} — get by id
+
+POST /api/employees — create
+Body: application/json → Employee
+
+PUT /api/employees/{id} — update
+
+DELETE /api/employees/{id} — delete
+```
+
+XML Import :
+```
+
+POST /api/import/xml — upload & import employees XML
+```
+
+Returns XmlImportResultDto with counts (created/updated/failed) and error details
