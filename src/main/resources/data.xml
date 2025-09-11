@@ -1,0 +1,20 @@
+<employees>
+  <employee>
+    <employeeId>E1001</employeeId>
+    <firstName>Mehedi</firstName>
+    <lastName>Hasan</lastName>
+    <division>IT</division>
+    <building>HQ</building>
+    <title>Engineer</title>
+    <room>201</room>
+  </employee>
+  <employee>
+    <employeeId>E1002</employeeId>
+    <firstName>Faria</firstName>
+    <lastName>Azad</lastName>
+    <division>HR</division>
+    <building>Annex</building>
+    <title>Manager</title>
+    <room>3B</room>
+  </employee>
+</employees>
