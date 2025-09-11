@@ -6,12 +6,14 @@ It provides employee management features such as **XML import**, **search**, and
 ---
 
 ## 🚀 Features
-- Import employees from XML
-- CRUD operations on employees
-- Search employees by first/last name
+- RESTful Employee APIs (create, read, update, delete)
+- XML bulk import (employees.xml) validated by employees.xsd
+- Centralized exception handling with meaningful error payloads
+- Search employees by id/first/last name
 - Pagination & sorting support
 - Oracle Database integration
-- REST API endpoints for easy integration
+- OpenAPI/Swagger UI docs
+- Layered, testable architecture
 
 ---
 
@@ -22,7 +24,7 @@ It provides employee management features such as **XML import**, **search**, and
 - **Oracle Database**
 - **Lombok**
 - **ModelMapper**
-- **Maven**
+- **Gradle**
 - **Swagger 3**
 
 ---
