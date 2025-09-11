@@ -28,3 +28,35 @@ It provides employee management features such as **XML import**, **search**, and
 ---
 
 ## 📂 Project Structure
+src
+ └── main
+     ├── java/com/hr/hrapplication
+     │   ├── config
+     │   │   ├── ApiExceptionHandler.java
+     │   │   ├── ModelMapperConfig.java
+     │   │   └── OpenApiConfig.java
+     │   ├── controller
+     │   │   ├── EmployeeController.java
+     │   │   └── XmlImportController.java
+     │   ├── dao
+     │   │   ├── EmployeeEntity.java
+     │   │   ├── EmployeeRepository.java
+     │   │   └── XmlImportResultDto.java
+     │   ├── domain
+     │   │   ├── Employee.java
+     │   │   ├── EmployeesXml.java
+     │   │   └── EmployeeXml.java
+     │   ├── exception
+     │   │   └── NotFoundException.java
+     │   ├── service
+     │   │   ├── EmployeeService.java
+     │   │   └── XmlImportService.java
+     │   └── HrApplication.java
+     └── resources
+         ├── static/
+         ├── templates/
+         ├── xsd/
+         │   └── employees.xsd
+         ├── application.properties
+         └── data.xml
+ └── test/...
