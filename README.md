@@ -91,3 +91,41 @@ POST /api/import/xml — upload & import employees XML
 ```
 
 Returns XmlImportResultDto with counts (created/updated/failed) and error details
+
+## Postman CURL
+
+Save/Update :
+```
+curl -L 'localhost:8080/api/employee/save' -H 'Content-Type: application/json' -d '{"id":"129","firstname":"Janne","lastname":"Doe","division":"Materials","building":"327","title":"Engineer","room":"19","createdat":null,"updatedat":null}'
+```
+
+list :
+```
+curl -L 'http://localhost:8080/api/employee/list'
+```
+
+Search-By-Id :
+```
+curl -L 'http://localhost:8080/api/employee/search/id/129'
+```
+
+Search-By-Name :
+```
+curl -L 'http://localhost:8080/api/employee/search/name/s?page=0&size=10'
+```
+
+XML-Batch-Import :
+```
+curl -L 'localhost:8080/api/import/employees/xml' -F 'file=@"postman-cloud:///1f08ee77-41e7-4cb0-84fe-971a297a6c50"'
+```
+
+
+
+
+
+
+
+
+
+
+
