@@ -24,8 +24,8 @@ public class EmployeeController {
 
     //    get all employees
     @GetMapping("/list")
-    public ResponseEntity<?> getEmployees() {
-        List<Employee> employeeList = employeeService.getAllEmployees();
+    public ResponseEntity<?> getEmployees(Pageable pageable) {
+        List<Employee> employeeList = employeeService.getAllEmployees(pageable);
         return ResponseEntity.ok().body(Map.of(
                 "data", employeeList,
                 "total", employeeList.size()

@@ -26,9 +26,9 @@ public class EmployeeService {
         this.modelMapper = modelMapper;
     }
 
-    public List<Employee> getAllEmployees() {
+    public List<Employee> getAllEmployees(Pageable pageable) {
         try {
-            return employeeRepository.findAll()
+            return employeeRepository.findAll(pageable)
                     .stream()
                     .map(employeeEntity -> modelMapper.map(employeeEntity, Employee.class))
                     .toList();
