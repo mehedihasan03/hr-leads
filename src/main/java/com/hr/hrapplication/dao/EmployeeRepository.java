@@ -10,6 +10,6 @@ import java.util.Optional;
 @Repository
 public interface EmployeeRepository extends JpaRepository<EmployeeEntity, String> {
 
-    Page<EmployeeEntity> findByFirstnameContainingIgnoreCaseOrLastnameContainingIgnoreCase(String firstName, String lastName, Pageable pageable);
+    Page<EmployeeEntity> findByFirstnameContainingIgnoreCaseOrLastnameContainingIgnoreCaseOrIdContaining(String firstName, String lastName, String id, Pageable pageable);
 
 }

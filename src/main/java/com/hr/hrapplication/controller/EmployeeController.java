@@ -23,7 +23,7 @@ public class EmployeeController {
     }
 
     //    get all employees
-    @GetMapping("/list")
+    @GetMapping("/getAll")
     public ResponseEntity<?> getEmployees(Pageable pageable) {
         List<Employee> employeeList = employeeService.getAllEmployees(pageable);
         return ResponseEntity.ok().body(Map.of(
@@ -33,8 +33,8 @@ public class EmployeeController {
     }
 
 //    search by employee id
-    @GetMapping("/search/id/{id}")
-    public ResponseEntity<?> searchEmployeeById(@PathVariable String id) {
+    @GetMapping("")
+    public ResponseEntity<?> searchEmployeeById(@RequestParam String id) {
         Employee employee = employeeService.getEmployeeById(id);
         return ResponseEntity.ok().body(Map.of(
                 "data", employee,
@@ -43,8 +43,8 @@ public class EmployeeController {
     }
 
 //    search by employee name
-    @GetMapping("/search/name/{searchText}")
-    public ResponseEntity<?> searchEmployeeByText(@PathVariable String searchText, Pageable pageable) {
+    @GetMapping("/list")
+    public ResponseEntity<?> searchEmployeeByText(@RequestParam String searchText, Pageable pageable) {
         Page<Employee> employees = employeeService.getEmployeeBySearchText(searchText, pageable);
         return ResponseEntity.ok().body(Map.of(
                 "data", employees.getContent(),

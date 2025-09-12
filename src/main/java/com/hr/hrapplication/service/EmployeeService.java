@@ -57,7 +57,7 @@ public class EmployeeService {
                         .map(employeeEntity -> modelMapper.map(employeeEntity, Employee.class));
             }
             return employeeRepository
-                    .findByFirstnameContainingIgnoreCaseOrLastnameContainingIgnoreCase(searchText, searchText, pageable)
+                    .findByFirstnameContainingIgnoreCaseOrLastnameContainingIgnoreCaseOrIdContaining(searchText, searchText, searchText, pageable)
                     .map(employeeEntity -> modelMapper.map(employeeEntity, Employee.class));
         } catch (Exception e) {
             log.error("Failed to search employee by text: {}", searchText, e);
