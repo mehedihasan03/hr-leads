@@ -5,6 +5,7 @@ import com.hr.hrapplication.service.EmployeeService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -56,7 +57,11 @@ public class EmployeeController {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteEmployeeById(@PathVariable String id) {
         String deleted = employeeService.deleteEmployeeById(id);
-        return ResponseEntity.ok().body(deleted);
+        return ResponseEntity.ok().body(
+                Map.of("status" , HttpStatus.OK.value(),
+                        "message", deleted
+                )
+        );
     }
 
 //    Edit employee details
